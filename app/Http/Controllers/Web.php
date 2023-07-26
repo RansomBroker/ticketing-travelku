@@ -514,7 +514,7 @@ class Web extends Controller
                                       ->where('acceptance', 'accept')
                                       ->where('sell_to', '!=', null)
                                       ->whereMonth('agent.created_at', '=', $month)
-                                      ->whereYear('agent.created_at', '=', '2023')
+                                      ->whereYear('agent.created_at', '=', date("Y"))
                                       ->where('agent.agent_id', Auth::user()->id)
                                       ->sum('deposit.deposit');
                                       
@@ -525,20 +525,20 @@ class Web extends Controller
                                       ->where('acceptance', 'accept')
                                       ->where('sell_to', '!=', null)
                                       ->whereMonth('agent.created_at', '=', $month)
-                                      ->whereYear('agent.created_at', '=', '2023')
+                                      ->whereYear('agent.created_at', '=', date("Y"))
                                       ->sum('deposit.deposit');
                 }
 
                 $o = (object)[
                     'jumlah' => $item,
-                    'bulan' => $month . '-' . '2022'
+                    'bulan' => $month . '-' . date("Y")
                 ];
                 
                 array_push($array, $o);
                 array_push($data['month'], $months[$i - 1]);
             }
 
-            $data['year'] = 2023;
+            $data['year'] = date("Y");
         }
 
         $data['report'] = $array;
