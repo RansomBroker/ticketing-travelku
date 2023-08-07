@@ -83,14 +83,14 @@
               <label class="mb-2" for="email">Email</label>
               <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
             </div>
-            <div class="col-lg-12 form-group">
+            <!-- <div class="col-lg-12 form-group">
               <label class="mb-2" for="password">Password</label>
               <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
             </div>
             <div class="col-lg-12 form-group">
               <label class="mb-2" for="password_confirmation">Konfirmasi Password</label>
               <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Password Confirmation" required>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="modal-footer">

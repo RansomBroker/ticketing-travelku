@@ -52,7 +52,7 @@ class Web extends Controller
     {
         $rules = [
             'email'                 => 'required|email|unique:users,email',
-            'password'              => 'required|min:6|confirmed',
+            // 'password'              => 'required|min:6|confirmed',
         ];
 
         $validator = Validator::make($request->all(), $rules);
