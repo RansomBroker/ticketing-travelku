@@ -51,7 +51,8 @@ class Web extends Controller
     public function add_agent(Request $request)
     {
         $rules = [
-            'email'                 => 'required|email|unique:users,email',
+            'password'              => 'required|min:6|confirmed',
+            // 'email'                 => 'required|email|unique:users,email',
             // 'password'              => 'required|min:6|confirmed',
         ];
 
